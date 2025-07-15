@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(MiniShell CXX)
+
+set(CMAKE_CXX_STANDARD 11)
+
+# --- CONFIGURATION PARA EL EJECUTABLE NORMAL ---
+set(MAIN_SOURCES
+        src/main.cpp
+        src/includes/strings_managment.cpp
+)
+
+add_executable(miniShell ${MAIN_SOURCES})
+
+target_include_directories(miniShell PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/includes
+)
