@@ -1,3 +1,0 @@
-/home/h3rhex/Development/C-C++/MiniShell/out/CMakeFiles/miniShell.dir
-/home/h3rhex/Development/C-C++/MiniShell/out/CMakeFiles/edit_cache.dir
-/home/h3rhex/Development/C-C++/MiniShell/out/CMakeFiles/rebuild_cache.dir

@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD 11)
 # --- CONFIGURATION PARA EL EJECUTABLE NORMAL ---
 set(MAIN_SOURCES
         src/main.cpp
-        src/includes/strings_managment.cpp
+        src/includes/lib/strings/strings.cpp
+        src/includes/shell/commands/commands.cpp
 )
 
 add_executable(miniShell ${MAIN_SOURCES})
