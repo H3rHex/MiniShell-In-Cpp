@@ -10,13 +10,28 @@ CMakeFiles/miniShell.dir/src/includes/shell/commands/commands.cpp.o
  /home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.cpp
  /home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.h
  /home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.h
+ /usr/include/c++/13/bits/exception.h
+ /usr/include/c++/13/new
+ /usr/include/features-time64.h
+ /usr/include/features.h
  /usr/include/stdc-predef.h
+ /usr/include/x86_64-linux-gnu/bits/long-double.h
+ /usr/include/x86_64-linux-gnu/bits/timesize.h
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h
 
 CMakeFiles/miniShell.dir/src/main.cpp.o
  /home/h3rhex/Development/C-C++/MiniShell/src/main.cpp
  /home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.h
  /home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.h
  /home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.h
+ /usr/include/c++/13/bits/exception.h
+ /usr/include/c++/13/new
  /usr/include/features-time64.h
  /usr/include/features.h
  /usr/include/linux/close_range.h
@@ -34,6 +49,9 @@ CMakeFiles/miniShell.dir/src/main.cpp.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h
+ /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
  /usr/include/x86_64-linux-gnu/sys/cdefs.h

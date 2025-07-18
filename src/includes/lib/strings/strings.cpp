@@ -85,3 +85,42 @@ char* copyString(const char* originalStr, char* destinationStr, int destBufferSi
     return destinationStr;
 }
 
+void splitStr(const char* originalStr, char** separatedStringArray, const int maxTockens) {
+    if (originalStr == nullptr || separatedStringArray == nullptr) return;
+
+    int i = 0; // Loop Index
+    int arrayWriteIndex = 0;
+    int originalStrSize = getStringLength(originalStr) + 1;
+     // Storage String
+
+    while (originalStr[i] != '\0' && arrayWriteIndex < maxTockens) {
+        while (originalStr[i] == ' ') i++;
+
+        char* temporal_containerBuffer = new char[originalStrSize - i];
+        int j = 0;
+        if (originalStr[i] == '"') {
+            i++; // Jump this iteration (")
+            while (originalStr[i] != '"' && originalStr[i] != '\0') {
+                temporal_containerBuffer[j++] = originalStr[i++];
+            }
+            if (originalStr[i] == '"') {
+                i++; // Jump final iteration (")
+            }
+        } else {
+            while (originalStr[i] != ' ' && originalStr[i] != '\0') {
+                temporal_containerBuffer[j++] = originalStr[i++];
+            }
+        }
+
+        if (j > 0) {  // Only if there is content
+            temporal_containerBuffer[j] = '\0';
+            separatedStringArray[arrayWriteIndex] = new char[j + 1];
+            copyString(temporal_containerBuffer, separatedStringArray[arrayWriteIndex], j + 1);
+            arrayWriteIndex++;
+        }
+
+        // Preparation for the next iteration
+        delete[] temporal_containerBuffer; // Prevent memory leaks
+    }
+}
+

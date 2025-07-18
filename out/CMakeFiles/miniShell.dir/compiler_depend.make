@@ -8,12 +8,27 @@ CMakeFiles/miniShell.dir/src/includes/lib/strings/strings.cpp.o: /home/h3rhex/De
 CMakeFiles/miniShell.dir/src/includes/shell/commands/commands.cpp.o: /home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.cpp \
   /home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.h \
   /home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.h \
-  /usr/include/stdc-predef.h
+  /usr/include/c++/13/bits/exception.h \
+  /usr/include/c++/13/new \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h
 
 CMakeFiles/miniShell.dir/src/main.cpp.o: /home/h3rhex/Development/C-C++/MiniShell/src/main.cpp \
   /home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.h \
   /home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.h \
   /home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.h \
+  /usr/include/c++/13/bits/exception.h \
+  /usr/include/c++/13/new \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/close_range.h \
@@ -31,6 +46,9 @@ CMakeFiles/miniShell.dir/src/main.cpp.o: /home/h3rhex/Development/C-C++/MiniShel
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -39,52 +57,62 @@ CMakeFiles/miniShell.dir/src/main.cpp.o: /home/h3rhex/Development/C-C++/MiniShel
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/13/bits/exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.cpp:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/features.h:
+
+/home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.h:
+
+/home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.h:
+
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/features-time64.h:
+
+/home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.h:
-
-/usr/include/stdc-predef.h:
-
-/home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.cpp:
+/usr/include/c++/13/new:
 
 /home/h3rhex/Development/C-C++/MiniShell/src/main.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/home/h3rhex/Development/C-C++/MiniShell/src/includes/shell/commands/commands.h:
-
-/usr/include/features.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/linux/close_range.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
 /usr/include/unistd.h:
 
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
 /usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/home/h3rhex/Development/C-C++/MiniShell/src/includes/lib/strings/strings.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:

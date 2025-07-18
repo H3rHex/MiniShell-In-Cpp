@@ -19,7 +19,7 @@ void initHashTable(Hash_commands_table* table, const char* commands_list[]) {
 
 int main() {
     // COMANDS ARRAY
-    const char* commands_list[] = {"exit", "clear", "help", nullptr};
+    const char* commands_list[] = {"exit", "clear", "print", "help", nullptr};
 
     // DECLARE HASH TABLE STRUCTURE
     Hash_commands_table commands_table;
@@ -28,6 +28,9 @@ int main() {
     char* buffer = new char[1024];
 
     while (true) {
+        // DECLARE COMMANDS ARRAY
+        char* command[2]; // [0] = COMMAND, [1] = ARGUMENT
+
         // WRITE PROMPT (OUT)
         write(STDOUT_FILENO, "\033[34m> \033[0m", getStringLength("\033[34m> \033[0m"));
         // GET A COMMAND (INPUT)
@@ -40,10 +43,14 @@ int main() {
         //Limpiamos los saltos
         cleanJumpCharacter(buffer);
 
-        // PASS TO LOWER CASE
+        //LOWER CASE BUFFER CONTAINER
         char* lowerCaseBuffer = new char[1024];
+
+        //SPLIT INPUT BUFFER
+        splitStr(buffer, command, 2);
+
         // CHECK IF "exit" COMMAND
-        bool isCommandFoundInTable = findCommand(&commands_table, toLower(buffer, lowerCaseBuffer, 1024));
+        bool isCommandFoundInTable = findCommand(&commands_table, toLower(command[0], lowerCaseBuffer, 1024));
 
         if (!isCommandFoundInTable) {
             delete[] lowerCaseBuffer;
@@ -71,6 +78,11 @@ int main() {
             }
             delete[] lowerCaseBuffer;
             continue;
+        }
+
+        if (compareStrings(lowerCaseBuffer, "print")) {
+            write(STDERR_FILENO, command[1], getStringLength(command[1]));
+            write(STDOUT_FILENO, "\n", 1);
         }
     }
     // MEMORY LIBERATION
