@@ -1,70 +1,46 @@
-# Proyecto: MiniShell (Shell en C++ desde cero)
+# MiniShell
 
-## 🧠 Objetivo del Proyecto
-Construir una shell mínima desde cero usando C++ de bajo nivel, sin bibliotecas estándar de alto nivel, para entender cómo interactúan los procesos, la memoria y el sistema operativo Linux a través de llamadas al sistema (`syscalls`).
+## English
 
-Este proyecto está diseñado como un reto técnico y educativo, ideal para comprender el funcionamiento de un entorno UNIX/Linux y sus primitivas más básicas.
+MiniShell is a simple command-line shell inspired by Bash, implemented from scratch in C/C++.  
+The main goal of this project is to build a custom shell by implementing the core logic manually, **without relying on high-level library functions**. Instead, it uses low-level system calls and handcrafted logic to manage commands and filesystem operations.
 
----
+### Features
+- Supports common shell commands such as `exit`, `print`, `clear`, `help`, `pwd`, `cd`, `ls`, `mkdir`, `rmdir`, `touch`, and `cat`.
+- Commands are stored and managed efficiently using a custom hash table for quick lookup.
+- All error and info messages are displayed in color to improve user experience.
+- Uses low-level syscalls (`mkdir`, `rmdir`, `creat`, `unlink`, etc.) to interact with the filesystem.
+- Minimal external dependencies to better understand OS internals and shell mechanics.
 
-## 🎯 Funcionalidades mínimas obligatorias
-
-1. **Prompt simple**  
-   Mostrar un prompt (`> ` o similar) que acepte comandos desde la entrada estándar.
-
-2. **Parseo de comandos**  
-   Separar el comando y sus argumentos (simulando `argv`).
-
-3. **Ejecución de comandos externos**  
-   Usar `fork()`, `execve()` y `waitpid()` para lanzar programas externos.
-
-4. **Manejo básico de errores**  
-   Mostrar errores si un comando no existe o falla al ejecutarse.
-
-5. **Comando interno `exit`**  
-   Termina la shell de forma limpia.
----
-
-## 📏 Reglas del proyecto (disciplinas obligatorias)
-
-- ❌ **No se permite** el uso de:
-  - `std::vector`, `std::string`, `std::map`, ni otras estructuras estándar dinámicas.
-  - `system()`, `popen()`, `pclose()` u otras funciones de alto nivel.
-  - Ninguna biblioteca externa: el proyecto debe basarse **solo en syscalls y funciones de C**.
-
-- ✅ **Se permite y se recomienda**:
-  - `malloc`, `calloc`, `free`, `realloc`
-  - `write`, `read`, `dup2`, `fork`, `execve`, `pipe`, `open`, `close`, `waitpid`
-  - Implementar tus propias funciones auxiliares (`strtok`, `strlen`, `strcmp`, etc.)
-
-- 📚 **Regla personal**:  
-  No usar la IA a menos que hayas investigado por tu cuenta durante al menos 20 minutos.
+### Development Rules
+- No use of high-level standard library functions for command implementations.
+- Manual management of memory and buffers.
+- Direct usage of Linux syscalls for filesystem and IO operations.
+- Focus on learning and re-implementing shell functionalities from the ground up.
 
 ---
 
-## 🧩 Posibles extensiones futuras (opcionales)
+## Español
 
-- Redirección de entrada/salida: `comando > archivo`, `comando < archivo`
-- Piping: `ls | grep cpp`
-- Variables de entorno (`PATH`, `HOME`, etc.)
-- Historial de comandos
-- Soporte para `cd`, `pwd`, y otros comandos internos
-- Soporte para operadores como `&&`, `||`
+MiniShell es una shell sencilla inspirada en Bash, implementada desde cero en C/C++.  
+El objetivo principal de este proyecto es construir una shell personalizada implementando la lógica principal manualmente, **sin depender de funciones de biblioteca de alto nivel**. En su lugar, utiliza llamadas al sistema de bajo nivel y lógica propia para manejar comandos y operaciones en el sistema de archivos.
+
+### Características
+- Soporta comandos comunes como `exit`, `print`, `clear`, `help`, `pwd`, `cd`, `ls`, `mkdir`, `rmdir`, `touch` y `cat`.
+- Los comandos se almacenan y gestionan eficientemente usando una tabla hash personalizada para una búsqueda rápida.
+- Todos los mensajes de error e información se muestran en color para mejorar la experiencia de usuario.
+- Utiliza llamadas al sistema de bajo nivel (`mkdir`, `rmdir`, `creat`, `unlink`, etc.) para interactuar con el sistema de archivos.
+- Mínimas dependencias externas para entender mejor los internals del sistema operativo y la mecánica de la shell.
+
+### Reglas de desarrollo
+- No usar funciones de biblioteca estándar de alto nivel para implementar los comandos.
+- Gestión manual de memoria y buffers.
+- Uso directo de llamadas al sistema Linux para operaciones de sistema de archivos y entrada/salida.
+- Enfoque en aprender y reimplementar funcionalidades de shell desde cero.
 
 ---
 
-## 🛠️ Herramientas recomendadas
-
-- Compilador: `Cmake`
-- Build: `Makefile`
+Feel free to contribute or modify this project for your own learning!
 
 ---
----
-
-## V1:
-- Comando exit funcional
-- Funciones de manejo de Strings usando logica a bajo nivel:
-    - getStringLength
-    - compareStrings
-    - toLower
 
