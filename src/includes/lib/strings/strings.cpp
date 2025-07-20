@@ -84,6 +84,7 @@ char* copyString(const char* originalStr, char* destinationStr, int destBufferSi
 
     return destinationStr;
 }
+char* command[2] = {nullptr, nullptr};
 
 void splitStr(const char* originalStr, char** separatedStringArray, const int maxTockens) {
     if (originalStr == nullptr || separatedStringArray == nullptr) return;

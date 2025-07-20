@@ -177,6 +177,30 @@ src/includes/shell/commands/commands.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniShell.dir/build.make CMakeFiles/miniShell.dir/src/includes/shell/commands/commands.cpp.s
 .PHONY : src/includes/shell/commands/commands.cpp.s
 
+src/includes/shell/hashTable/hashTable.o: src/includes/shell/hashTable/hashTable.cpp.o
+.PHONY : src/includes/shell/hashTable/hashTable.o
+
+# target to build an object file
+src/includes/shell/hashTable/hashTable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniShell.dir/build.make CMakeFiles/miniShell.dir/src/includes/shell/hashTable/hashTable.cpp.o
+.PHONY : src/includes/shell/hashTable/hashTable.cpp.o
+
+src/includes/shell/hashTable/hashTable.i: src/includes/shell/hashTable/hashTable.cpp.i
+.PHONY : src/includes/shell/hashTable/hashTable.i
+
+# target to preprocess a source file
+src/includes/shell/hashTable/hashTable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniShell.dir/build.make CMakeFiles/miniShell.dir/src/includes/shell/hashTable/hashTable.cpp.i
+.PHONY : src/includes/shell/hashTable/hashTable.cpp.i
+
+src/includes/shell/hashTable/hashTable.s: src/includes/shell/hashTable/hashTable.cpp.s
+.PHONY : src/includes/shell/hashTable/hashTable.s
+
+# target to generate assembly for a file
+src/includes/shell/hashTable/hashTable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniShell.dir/build.make CMakeFiles/miniShell.dir/src/includes/shell/hashTable/hashTable.cpp.s
+.PHONY : src/includes/shell/hashTable/hashTable.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... src/includes/shell/commands/commands.o"
 	@echo "... src/includes/shell/commands/commands.i"
 	@echo "... src/includes/shell/commands/commands.s"
+	@echo "... src/includes/shell/hashTable/hashTable.o"
+	@echo "... src/includes/shell/hashTable/hashTable.i"
+	@echo "... src/includes/shell/hashTable/hashTable.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

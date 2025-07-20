@@ -81,12 +81,12 @@ clean: CMakeFiles/miniShell.dir/clean
 CMakeFiles/miniShell.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniShell.dir/build.make CMakeFiles/miniShell.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniShell.dir/build.make CMakeFiles/miniShell.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/h3rhex/Development/C-C++/MiniShell/out/CMakeFiles --progress-num=1,2,3,4 "Built target miniShell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/h3rhex/Development/C-C++/MiniShell/out/CMakeFiles --progress-num=1,2,3,4,5 "Built target miniShell"
 .PHONY : CMakeFiles/miniShell.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/miniShell.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/h3rhex/Development/C-C++/MiniShell/out/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/h3rhex/Development/C-C++/MiniShell/out/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/miniShell.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/h3rhex/Development/C-C++/MiniShell/out/CMakeFiles 0
 .PHONY : CMakeFiles/miniShell.dir/rule

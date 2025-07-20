@@ -9,6 +9,7 @@ set(MAIN_SOURCES
         src/main.cpp
         src/includes/lib/strings/strings.cpp
         src/includes/shell/commands/commands.cpp
+        src/includes/shell/hashTable/hashTable.cpp
 )
 
 add_executable(miniShell ${MAIN_SOURCES})

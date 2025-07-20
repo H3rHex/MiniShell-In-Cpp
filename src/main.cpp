@@ -5,87 +5,61 @@
 #include "unistd.h"
 #include "includes/lib/strings/strings.h"
 #include "includes/shell/commands/commands.h"
-
-void initHashTable(Hash_commands_table* table, const char* commands_list[]) {
-    // INITIALIZE HASH TABLE ON MEMORY
-    initializeHashTable(table);
-    for (int i = 0; commands_list[i] != nullptr; i++) {
-        Command_node command;
-        copyString(commands_list[i], command.command_name, sizeof(command.command_name));
-        insertCommand(table, &command);
-    }
-
-}
-
+#include "includes/shell/hashTable/hashTable.h"
 int main() {
-    // COMANDS ARRAY
-    const char* commands_list[] = {"exit", "clear", "print", "help", nullptr};
-
     // DECLARE HASH TABLE STRUCTURE
     Hash_commands_table commands_table;
-    initHashTable(&commands_table, commands_list);
-
-    char* buffer = new char[1024];
+    initCommandsTable(&commands_table);
 
     while (true) {
+        char* inputBuffer = new char[1024];
         // DECLARE COMMANDS ARRAY
-        char* command[2]; // [0] = COMMAND, [1] = ARGUMENT
+        char* command[2] = {nullptr, nullptr}; // [0] = COMMAND, [1] = ARGUMENT
+
 
         // WRITE PROMPT (OUT)
         write(STDOUT_FILENO, "\033[34m> \033[0m", getStringLength("\033[34m> \033[0m"));
         // GET A COMMAND (INPUT)
-        ssize_t bytes_leidos = read(STDIN_FILENO, buffer, 1024 -1);
+        ssize_t bytes_leidos = read(STDIN_FILENO, inputBuffer, 1024 -1);
         // CHECK ERRORS
         if (bytes_leidos > 0) {
-            buffer[bytes_leidos] = '\0'; // El ultimo byte sera nulo
+            inputBuffer[bytes_leidos] = '\0';
+        }
+
+        if (inputBuffer[0] == '\n') {
+            delete[] inputBuffer;
+            continue;
         }
 
         //Limpiamos los saltos
-        cleanJumpCharacter(buffer);
+        cleanJumpCharacter(inputBuffer);
 
         //LOWER CASE BUFFER CONTAINER
         char* lowerCaseBuffer = new char[1024];
 
         //SPLIT INPUT BUFFER
-        splitStr(buffer, command, 2);
+        splitStr(inputBuffer, command, 2);
 
         // CHECK IF "exit" COMMAND
         bool isCommandFoundInTable = findCommand(&commands_table, toLower(command[0], lowerCaseBuffer, 1024));
 
+        // COMMANDS
         if (!isCommandFoundInTable) {
-            delete[] lowerCaseBuffer;
             write(STDOUT_FILENO, "\033[31mEl comando no existe\033[0m\n", getStringLength("\033[31mEl comando no existe\033[0m\n"));
             continue;
-        }
-
-        // MEMORY LIBERATION
-        if (compareStrings(lowerCaseBuffer, "exit")) {
-            delete[] lowerCaseBuffer;
-            break;
-        }
-
-        if (compareStrings(lowerCaseBuffer, "clear")) {
-            // CALL CLEAR FUNCTON
-            write(STDOUT_FILENO, "\033[2J\033[H", getStringLength("\033[2J\033[H"));
-            delete[] lowerCaseBuffer;
-            continue;
-        }
-
-        if (compareStrings(lowerCaseBuffer, "help")) {
-            for (int i = 0; commands_list[i] != nullptr; i++) {
-                write(STDOUT_FILENO, commands_list[i], getStringLength(commands_list[i]));
-                write(STDOUT_FILENO, "\n", 1);
+        } else {
+            int commandResponse = runCommand(&commands_table, lowerCaseBuffer, command[1]);
+            if (commandResponse != 0) {
+                delete[] inputBuffer;
+                delete[] lowerCaseBuffer;
+                continue;
+            } else {
+                delete[] inputBuffer;
+                delete[] lowerCaseBuffer;
+                break;
             }
-            delete[] lowerCaseBuffer;
-            continue;
-        }
-
-        if (compareStrings(lowerCaseBuffer, "print")) {
-            write(STDERR_FILENO, command[1], getStringLength(command[1]));
-            write(STDOUT_FILENO, "\n", 1);
         }
     }
     // MEMORY LIBERATION
-    delete[] buffer;
     return 0; // Successful exit
 }

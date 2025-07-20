@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/miniShell.dir/src/includes/lib/strings/strings.cpp.o.d"
   "CMakeFiles/miniShell.dir/src/includes/shell/commands/commands.cpp.o"
   "CMakeFiles/miniShell.dir/src/includes/shell/commands/commands.cpp.o.d"
+  "CMakeFiles/miniShell.dir/src/includes/shell/hashTable/hashTable.cpp.o"
+  "CMakeFiles/miniShell.dir/src/includes/shell/hashTable/hashTable.cpp.o.d"
   "CMakeFiles/miniShell.dir/src/main.cpp.o"
   "CMakeFiles/miniShell.dir/src/main.cpp.o.d"
   "miniShell"
