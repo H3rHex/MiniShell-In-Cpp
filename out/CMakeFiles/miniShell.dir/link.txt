@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/miniShell.dir/src/main.cpp.o CMakeFiles/miniShell.dir/src/includes/lib/strings/strings.cpp.o CMakeFiles/miniShell.dir/src/includes/shell/commands/commands.cpp.o CMakeFiles/miniShell.dir/src/includes/shell/hashTable/hashTable.cpp.o -o miniShell 
